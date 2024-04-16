@@ -4,6 +4,8 @@
  if(is_signed_in()){
   $addr = new Address($_SERVER['QUERY_STRING']);
   $html = new HTML($addr);
-  echo $html->Run();
+  $status = $html->Run();
+  http_response_code($status);
+  echo $status;
  }
 ?>

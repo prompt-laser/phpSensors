@@ -4,7 +4,7 @@
   private string $_address;
 
   function Sanitize($address){
-   $pattern = "/[!@#\$%^&*()<>,=?'\":;|\\\/{}`~_+=\[\] ]/";
+   $pattern = "/[!@#\$%^&*()<>,=?'\":;|\\{}`~_+=\[\] ]/";
    return $address;
   }
 
