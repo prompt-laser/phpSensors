@@ -4,6 +4,6 @@
  if(is_signed_in()){
   $addr = new Address($_SERVER['QUERY_STRING']);
   $http = new HTTP($addr);
-  echo $http->Run();
+  http_response_code($http->Run());
  }
 ?>

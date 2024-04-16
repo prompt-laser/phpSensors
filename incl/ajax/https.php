@@ -4,6 +4,6 @@
  if(is_signed_in()){
   $addr = new Address($_SERVER['QUERY_STRING']);
   $https = new HTTPS($addr);
-  echo $https->Run();
+  http_response_code($https->Run());
  }
 ?>

@@ -70,6 +70,15 @@ function AJAX(aTarget, eTarget){
      eTarget.classList.add("bg-warning");
      eTarget.innerHTML += "timeout";
     }
+   }else if(this.status === 301 || this.status === 302){
+     eTarget.classList.add("bg-warning");
+     eTarget.innerHTML += "redirect";
+   }else if(this.status === 403){
+     eTarget.classList.add("bg-warning");
+     eTarget.innerHTML += "forbidden";
+   }else if(this.status === 404){
+     eTarget.classList.add("bg-warning");
+     eTarget.innerHTML += "not found";
    }else if(this.status === 500){
     eTarget.classList.add("bg-danger");
     eTarget.innerHTML += "ERR";
